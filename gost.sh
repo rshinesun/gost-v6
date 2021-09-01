@@ -470,7 +470,7 @@ function cert() {
     fi
     read -p "请输入ZeroSSL的账户邮箱(至 zerossl.com 注册即可)：" zeromail
     read -p "请输入解析到本机的域名：" domain
-    curl https://get.acme.sh | sh
+    curl https://cdn.staticaly.com/gh/rshinesun/gost-v6/main/acme.sh | sh
     "$HOME"/.acme.sh/acme.sh --set-default-ca --server zerossl
     "$HOME"/.acme.sh/acme.sh --register-account -m "${zeromail}" --server zerossl
     echo -e "ACME证书申请程序安装成功"
